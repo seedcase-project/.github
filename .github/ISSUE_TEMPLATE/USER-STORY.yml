@@ -1,0 +1,30 @@
+name: User story
+description: File a user story/feature request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this user story! 
+        When writing the issue, this structure helps with explicitly 
+        1) keeping the user in mind, 2) explicitly stating the functionality 
+        of the change requested, and 3) how this will benefit this kind of 
+        user.
+  - type: textarea
+    id: user-story
+    attributes:
+      label: What feature would you like to request?
+      description: Remember to be specific about the user this will benefit and the functionality you would like
+      value: "As a <user> I want to <functionality> so that <benefit>"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+assignees:
+  - "lwjohnst"
+title: "[user-story]: <title>"
