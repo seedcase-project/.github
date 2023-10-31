@@ -14,7 +14,7 @@ body:
     attributes:
       label: What user story would you like to add?
       description: Remember to be specific about the user this will benefit and the functionality you would like
-      value: "As a <user> I want to <functionality> so that <benefit>"
+      value: "As a <user>, I want to <functionality>, so that <benefit>"
     validations:
       required: true
   - type: checkboxes
