@@ -6,14 +6,14 @@ body:
       value: |
         Thanks for taking the time to fill out this user story! 
         When writing the issue, this structure helps with explicitly 
-        1) keeping the user in mind, 2) explicitly stating the functionality 
+        1) keeping the user in mind, 2) stating the functionality 
         of the change requested, and 3) how this will benefit this kind of 
         user.
   - type: textarea
     id: user-story
     attributes:
       label: What user story would you like to add?
-      description: Remember to be specific about the user this will benefit and the functionality you would like
+      description: Remember to be specific about the user this change will benefit, and the functionality you would like to see implemented
       value: "As a <user>, I want to <functionality>, so that <benefit>"
     validations:
       required: true
