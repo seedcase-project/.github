@@ -22,7 +22,7 @@ body:
   - type: textarea
     id: solution
     attributes: 
-      label: "(Optional): Suggest A Solution"
+      label: "Optional: Suggest A Solution"
       description: | 
         A concise description of your preferred solution. Things to address include:
         * Details of the technical implementation
