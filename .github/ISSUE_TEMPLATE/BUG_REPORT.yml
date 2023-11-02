@@ -18,8 +18,6 @@ body:
   #     default: 0
   #   validations:
   #     required: true
-    validations:
-      required: true
   - type: textarea
     id: steps-to-reproduce
     attributes: 
@@ -52,6 +50,8 @@ body:
         What actually happened, when you did the steps above? Be as 
         specific as you can when describing this. 
         If possible, include screenshots or videos here as well.
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
