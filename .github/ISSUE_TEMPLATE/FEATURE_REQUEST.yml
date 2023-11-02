@@ -1,0 +1,40 @@
+name: Feature Request
+description: Request a new or improved feature
+title: "[feature-request]: <title>"
+labels: ["feature-request"]
+body: 
+  - type: markdown
+    attributes: 
+      value: | 
+        Thanks for taking the time to fill out this feature request. 
+        Please search in existing issues first to ensure this feature has not already 
+        been requested.
+  - type: textarea
+    id: feature-request
+    attributes: 
+      label: What feature would you like to request? 
+      description: |
+        Please present a concise description of the problem to be addressed by this 
+        feature request, and be as clear as you can on what parts of the problem that 
+        are considered to be in-scope and out-of-scope.
+    validations: 
+      required: true
+  - type: textarea
+    id: solution
+    attributes: 
+      label: "(Optional): Suggest A Solution"
+      description: | 
+        A concise description of your preferred solution. Things to address include:
+        * Details of the technical implementation
+        * Tradeoffs made in design decisions
+        * Caveats and considerations for the future
+    validations: 
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
