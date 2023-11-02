@@ -62,6 +62,7 @@ body:
       render: shell
     validations:
       required: false
+  - type: dropdown 
     id: severity-priority
     attribute: 
       label: Severity/Priority 
@@ -70,6 +71,10 @@ body:
         1: High/Critical: anything that impacts the user flow or blocks usage
         2: Medium: anything that negatively affects the user experience 
         3: Minor: everything else (e.g., typos, missing icons, layout issues, etc.)
+      options: 
+        - 1: High/Critical
+        - 2: Medium
+        - 3: Minor
   - type: input
     id: contact
     attributes:
