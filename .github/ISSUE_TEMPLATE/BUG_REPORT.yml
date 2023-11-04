@@ -1,0 +1,93 @@
+name: Bug Report
+description: File a bug report
+title: "[bug]: <title>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  # - type: dropdown -- include this when we start versioning
+  #   id: version
+  #   attributes:
+  #     label: Version
+  #     description: What version of our software are you running?
+  #     options:
+  #       - 1.0.2 (Default)
+  #       - 1.0.3 (Edge)
+  #     default: 0
+  #   validations:
+  #     required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes: 
+      label: Steps to reproduce
+      description: | 
+        How do you trigger this bug? Please walk us through it step by step.
+        Use the “>” symbol to show the steps. 
+        Example: 
+        1. Go to settings > Profile (this would take user to new screen)
+        2. Tap on More Options > Delete Account 
+      value: |
+        1.
+        2.
+        3.
+        ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-result
+    attributes: 
+      label: Expected result
+      description: What should happen, when you do the steps above? 
+    validations: 
+      required: true
+  - type: textarea
+    id: actual-result
+    attributes: 
+      label: Actual result (the bug)
+      description: | 
+        What actually happened, when you did the steps above? Be as 
+        specific as you can when describing this. 
+        If possible, include screenshots or videos here as well.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Optional: Relevant log output"
+      description: | 
+        Please copy and paste any relevant log output. This will be automatically 
+        formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: false
+  - type: dropdown 
+    id: severity-priority
+    attribute: 
+      label: Severity/Priority 
+      description: | 
+        Describe the severity of the impact the bug has on the software's functionality
+        1: High/Critical: anything that impacts the user flow or blocks usage
+        2: Medium: anything that negatively affects the user experience 
+        3: Minor: everything else (e.g., typos, missing icons, layout issues, etc.)
+      options: 
+        - 1: High/Critical
+        - 2: Medium
+        - 3: Minor
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: email@example.com
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
