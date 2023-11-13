@@ -64,7 +64,7 @@ body:
       required: false
   - type: dropdown 
     id: severity-priority
-    attribute: 
+    attributes: 
       label: Severity/Priority 
       description: | 
         Describe the severity of the impact the bug has on the software's functionality
