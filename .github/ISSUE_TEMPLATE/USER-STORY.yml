@@ -6,11 +6,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this user story! 
-        When writing the issue, this structure helps with explicitly 
-        1) keeping the user in mind, 2) stating the functionality 
-        of the change requested, and 3) how this will benefit this kind of 
-        user.
+        Thanks for taking the time to fill out this user story.
+
+        When writing the issue, this structure helps with explicitly
+        1) phrasing the issue/change from the the user's perspective
+        2) stating the functionality of the change requested, and 
+        3) stating how this will benefit this kind of user.
   - type: textarea
     id: user-story
     attributes:
