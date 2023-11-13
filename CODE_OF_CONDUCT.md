@@ -1,9 +1,7 @@
 # Code of Conduct
 
-::: callout-note
-This is a slightly modified version of the Contributor Covenant Code of
-Conduct (see [attribution](#attribution) below).
-:::
+> This is a slightly modified version of the Contributor Covenant Code of
+> Conduct (see [attribution](#attribution) below).
 
 ## Our Pledge
 
