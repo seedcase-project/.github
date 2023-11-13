@@ -1,5 +1,6 @@
 name: User story
 description: Create a user story
+title: "[user-story]: <title>"
 body:
   - type: markdown
     attributes:
