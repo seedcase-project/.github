@@ -8,7 +8,7 @@ body:
       value: | 
         Thanks for taking the time to fill out this feature request.
 
-        NB: Please search in existing issues first to ensure this feature has not already 
+        Note: Please search in existing issues first to ensure this feature has not already 
         been requested.
   - type: textarea
     id: feature-request
