@@ -1,14 +1,17 @@
 name: User story
 description: Create a user story
+title: "[user-story]: <title>"
+labels: ["user-story"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this user story! 
-        When writing the issue, this structure helps with explicitly 
-        1) keeping the user in mind, 2) stating the functionality 
-        of the change requested, and 3) how this will benefit this kind of 
-        user.
+        Thanks for taking the time to fill out this user story.
+
+        When writing the issue, this structure helps with explicitly
+        1) phrasing the issue/change from the the user's perspective
+        2) stating the functionality of the change requested, and 
+        3) stating how this will benefit this kind of user.
   - type: textarea
     id: user-story
     attributes:
@@ -21,10 +24,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md).
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
-assignees:
-  - "lwjohnst"
-title: "[user-story]: <title>"
