@@ -1,0 +1,7 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    -   id: trailing-whitespace # trims trailing whitespace.
+    -   id: end-of-file-fixer # ensures that a file is either empty, or ends with one newline.
+    -   id: check-yaml # checks yaml files for parsable syntax.
