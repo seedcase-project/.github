@@ -72,9 +72,9 @@ body:
         2: Medium: anything that negatively affects the user experience 
         3: Minor: everything else (e.g., typos, missing icons, layout issues, etc.)
       options: 
-        - 1: High/Critical
-        - 2: Medium
-        - 3: Minor
+        - "1: High/Critical"
+        - "2: Medium"
+        - "3: Minor"
   - type: input
     id: contact
     attributes:
@@ -87,7 +87,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../../CODE_OF_CONDUCT.md).
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
