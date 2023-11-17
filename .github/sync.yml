@@ -1,0 +1,40 @@
+group:
+  # All repositories
+  - files:
+      - source: .editorconfig
+        dest: .editorconfig
+      - source: .gitignore
+        dest: .gitignore
+      - source: .vscode/settings.json
+        dest: .vscode/settings.json
+      - source: .vscode/extensions.json
+        dest: .vscode/extensions.json
+      - source: .github/workflows/auto-author-assign.yml
+        dest: .github/workflows/auto-author-assign.yml
+    repos: |
+      seedcase-project/seedcase-project
+      seedcase-project/seedcase-registry
+      seedcase-project/seedcase-theme
+      seedcase-project/seedcase-team
+      seedcase-project/seedcase
+      steno-aarhus/sdca_admin
+
+  # Python Django project repositories
+  - files:
+      - source: common/python-style.yml
+        dest: .github/workflows/python-style.yml
+      - source: common/justfile/docker-dev
+        dest: justfile
+    repos: |
+      seedcase-project/seedcase-registry
+      seedcase-project/seedcase
+  
+  # Website repositories
+  - files:
+      - source: common/justfile/web
+        dest: justfile
+      - source: common/justfile/web
+        dest: justfile
+    repos: |
+      seedcase-project/seedcase-project
+      seedcase-project/team
