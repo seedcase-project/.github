@@ -1,10 +1,14 @@
 group:
   # All repositories
   - files:
+      - source: .github/CODEOWNERS
+        dest: .github/CODEOWNERS
       - source: .editorconfig
         dest: .editorconfig
       - source: .gitignore
         dest: .gitignore
+      - source: .vscode/quarto.code-snippets
+        dest: .vscode/quarto.code-snippets
       - source: .vscode/settings.json
         dest: .vscode/settings.json
       - source: .vscode/extensions.json
@@ -28,7 +32,7 @@ group:
     repos: |
       seedcase-project/seedcase-registry
       seedcase-project/seedcase
-  
+
   # Website repositories
   - files:
       - source: common/justfile/web
