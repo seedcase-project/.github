@@ -1,0 +1,34 @@
+## Description
+
+<!-- DO NOT LEAVE THIS SECTION BLANK
+Please complete along the following lines:
+- this [describes/updates/expands/replaces/removes] the design document for...
+- describe where possible the context for the changes, why are we doing it? -->
+
+## Type of Pull Request (please select all that apply)
+
+- [ ] New document
+- [ ] Update
+- [ ] Augmentation
+- [ ] Replacement
+- [ ] Deletion
+<!--TODO are we missing any here? -->
+
+## Related Issues
+
+<!-- To avoid the reviewer having to hunt for this information please note the issues here
+
+Please use the following format: #[number] - optional, give a short title -->
+
+## Reviewer focus
+
+<!-- Any particular section the reviewer should focus on, anywhere that would be a good place to start? -->
+
+### Code Author Checklist
+<!-- This is to help you determine if your work is ready to be reviewed -->
+- [ ] Spell-check
+    - [ ] US 
+    - [ ] UK
+- [ ] Pre-commit hooks have passed locally without warnings or errors
+- [ ] Did the page(s) render correctly on your machine without breaking
+- [ ] Any new category words (keywords) added to the code snippet?
