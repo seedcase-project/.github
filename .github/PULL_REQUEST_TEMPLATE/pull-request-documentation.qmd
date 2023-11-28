@@ -18,17 +18,17 @@ Please complete along the following lines:
 
 <!-- To avoid the reviewer having to hunt for this information please note the issues here
 
-Please use the following format: #[number] - optional, give a short title -->
+Please use the following format: #[number] - short title of the issue -->
 
-## Reviewer focus
+## Reviewer Focus
 
 <!-- Any particular section the reviewer should focus on, anywhere that would be a good place to start? -->
 
 ### Code Author Checklist
-<!-- This is to help you determine if your work is ready to be reviewed -->
+<!-- This is to help you determine if your work is ready to be reviewed, if a point is irrelevant (i.e. you didn't make any new keywords) you can tick it to indicate that this has been done -->
 - [ ] Spell-check
     - [ ] US 
     - [ ] UK
 - [ ] Pre-commit hooks have passed locally without warnings or errors
-- [ ] Did the page(s) render correctly on your machine without breaking
-- [ ] Any new category words (keywords) added to the code snippet?
+- [ ] Did the page(s) preview correctly on your machine without breaking
+- [ ] New category words (keywords) (if any) added to the code snippet?
