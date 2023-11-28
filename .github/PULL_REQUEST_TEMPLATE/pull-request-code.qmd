@@ -34,21 +34,21 @@ Please use the following format: #[number] - optional, give a short title -->
 
 <!-- Please explain why the tests are not needed for this PR here -->
 
-## Hardware and software configuration
+## Hardware and Software Configuration
 
 <!-- If you have tested using a specific set of hardware and software, please make a note of it here -->
 
-## Code documentation
+## Code Documentation
 
 <!-- Please detail which parts, if any, of the documentation has been updated -->
 
-## Reviewer focus
+## Reviewer Focus
 
 <!-- Any particular section the reviewer should focus on, anywhere that would be a good place to start? -->
 
 ### Code Author Checklist
-<!-- This is to help you determine if your work is ready to be reviewed -->
+<!-- This is to help you determine if your work is ready to be reviewed, if an item is not relevant then you can mark it as done (because you have checked and found that it isn't needed) -->
 - [ ] Automated tests are added where needed
-- [ ] All (new and existing) tests have run without falling over
+- [ ] All (new and existing) tests have run locally without falling over
 - [ ] Build and pre-commit hooks have passed locally without warnings or errors
 - [ ] Relevant documentation has been updated
