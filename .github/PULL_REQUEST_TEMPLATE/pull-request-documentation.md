@@ -1,41 +1,30 @@
 ## Description
 
-<!-- 
-DO NOT LEAVE THIS SECTION BLANK
-Please complete along the following lines:
-- this [describes/updates/expands/replaces/removes] the design document for...
-- describe where possible the context for the changes, why are we doing it? 
--->
+<!-- DO NOT LEAVE THIS SECTION BLANK -->
 
-## Type of Pull Request (please select all that apply)
-
-- [ ] New document
-- [ ] Update
-- [ ] Augmentation
-- [ ] Replacement
-- [ ] Deletion
-
-<!--TODO are we missing any here? -->
+These changes are done because of ... {REASON FOR CHANGES}.
 
 ## Related Issues
 
-<!-- 
-To avoid the reviewer having to hunt for this information please note the issues here
+<!-- Connect this PR to relevant issues, to help the reviewer but also for recordkeeping. -->
 
-Please use the following format: #[number] - short title of the issue 
--->
+See Issues: #...
+
+<!-- Also list issues the PR closes -->
+
+Closes Issue ...
 
 ## Reviewer Focus
 
 <!-- Any particular section the reviewer should focus on, anywhere that would be a good place to start? -->
 
-### Code Author Checklist
+## PR Checklist
 
-<!-- This is to help you determine if your work is ready to be reviewed, if a point is irrelevant (i.e. you didn't make any new keywords) you can tick it to indicate that this has been done -->
+<!-- This helps us determine if your work is ready to be reviewed, if a point is irrelevant (i.e. you didn't make any new keywords) you can delete it -->
 
 - [ ] Spell-check
     - [ ] US
     - [ ] UK
 - [ ] Pre-commit hooks have passed locally without warnings or errors
 - [ ] Did the page(s) preview correctly on your machine without breaking
-- [ ] New category words (keywords) (if any) added to the code snippet
+- [ ] New category words (keywords) (if any) added to the code snippet file
