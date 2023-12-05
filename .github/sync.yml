@@ -17,11 +17,8 @@ group:
         dest: .github/workflows/auto-author-assign.yml
     repos: |
       seedcase-project/seedcase-project
-      seedcase-project/seedcase-registry
       seedcase-project/seedcase-theme
       seedcase-project/team
-      seedcase-project/seedcase
-      steno-aarhus/sdca_admin
 
   # Python Django project repositories
   - files:
@@ -30,8 +27,7 @@ group:
       - source: common/justfile/docker-dev
         dest: justfile
     repos: |
-      seedcase-project/seedcase-registry
-      seedcase-project/seedcase
+      seedcase-project/seedcase-sprout
 
   # Website repositories
   - files:
