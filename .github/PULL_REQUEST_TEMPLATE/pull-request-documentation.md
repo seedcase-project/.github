@@ -1,9 +1,11 @@
 ## Description
 
-<!-- DO NOT LEAVE THIS SECTION BLANK
+<!-- 
+DO NOT LEAVE THIS SECTION BLANK
 Please complete along the following lines:
 - this [describes/updates/expands/replaces/removes] the design document for...
-- describe where possible the context for the changes, why are we doing it? -->
+- describe where possible the context for the changes, why are we doing it? 
+-->
 
 ## Type of Pull Request (please select all that apply)
 
@@ -12,22 +14,27 @@ Please complete along the following lines:
 - [ ] Augmentation
 - [ ] Replacement
 - [ ] Deletion
+
 <!--TODO are we missing any here? -->
 
 ## Related Issues
 
-<!-- To avoid the reviewer having to hunt for this information please note the issues here
+<!-- 
+To avoid the reviewer having to hunt for this information please note the issues here
 
-Please use the following format: #[number] - short title of the issue -->
+Please use the following format: #[number] - short title of the issue 
+-->
 
 ## Reviewer Focus
 
 <!-- Any particular section the reviewer should focus on, anywhere that would be a good place to start? -->
 
 ### Code Author Checklist
+
 <!-- This is to help you determine if your work is ready to be reviewed, if a point is irrelevant (i.e. you didn't make any new keywords) you can tick it to indicate that this has been done -->
+
 - [ ] Spell-check
-    - [ ] US 
+    - [ ] US
     - [ ] UK
 - [ ] Pre-commit hooks have passed locally without warnings or errors
 - [ ] Did the page(s) preview correctly on your machine without breaking
