@@ -16,6 +16,7 @@ group:
       - source: .github/workflows/auto-author-assign.yml
         dest: .github/workflows/auto-author-assign.yml
     repos: |
+      seedcase-project/seedcase-sprout
       seedcase-project/seedcase-project
       seedcase-project/seedcase-theme
       seedcase-project/team
