@@ -19,6 +19,7 @@ group:
       seedcase-project/seedcase-sprout
       seedcase-project/seedcase-project
       seedcase-project/seedcase-theme
+      seedcase-project/design
       seedcase-project/team
 
   # Python Django project repositories
@@ -34,8 +35,9 @@ group:
   - files:
       - source: common/justfile/web
         dest: justfile
-      - source: common/justfile/web
-        dest: justfile
+      - source: common/devcontainers/web.json
+        dest: .devcontainer/devcontainer.json
     repos: |
       seedcase-project/seedcase-project
+      seedcase-project/design
       seedcase-project/team
