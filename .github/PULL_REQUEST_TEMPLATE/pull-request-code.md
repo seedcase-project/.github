@@ -1,10 +1,10 @@
 ## Description
 
-<!-- DO NOT LEAVE THIS SECTION BLANK
-Please complete along the following lines:
-- this [removes/adds/fixes/replaces] the [feature/bug/issue]
-- describe where possible the context for the changes, why are we doing it?
-- if other solutions were considered, please mention them here, alternatively you may note why you didn't look at other solutions if those were available. -->
+<!-- DO NOT LEAVE THIS SECTION BLANK -->
+
+- This PR {removes/adds/fixes/replaces} the {feature/bug/issue/documentation/tests}
+- These changes are done because of ... {reasons for change/why you're doing it}.
+- {Remove this if not needed} Other solutions included ...
 
 ## Type of Pull Request (please select all that apply)
 
@@ -18,13 +18,18 @@ Please complete along the following lines:
 - [ ] Revert
 - [ ] CI
 - [ ] Code documentation update
+
 <!--TODO are we missing any here? -->
 
 ## Related Issues
 
-<!-- To avoid the reviewer having to hunt for this information please note the issues here
+<!-- Connect this PR to relevant issues, to help the reviewer but also for record-keeping. -->
 
-Please use the following format: #[number] - optional, give a short title -->
+See Issues: #...
+
+<!-- Also list issues the PR closes -->
+
+Closes Issue ...
 
 ## Testing
 
@@ -34,10 +39,6 @@ Please use the following format: #[number] - optional, give a short title -->
 
 <!-- Please explain why the tests are not needed for this PR here -->
 
-## Hardware and Software Configuration
-
-<!-- If you have tested using a specific set of hardware and software, please make a note of it here -->
-
 ## Code Documentation
 
 <!-- Please detail which parts, if any, of the documentation has been updated -->
@@ -46,9 +47,12 @@ Please use the following format: #[number] - optional, give a short title -->
 
 <!-- Any particular section the reviewer should focus on, anywhere that would be a good place to start? -->
 
-### Code Author Checklist
+## Code Author Checklist
+
 <!-- This is to help you determine if your work is ready to be reviewed, if an item is not relevant then you can mark it as done (because you have checked and found that it isn't needed) -->
-- [ ] Automated tests are added where needed
-- [ ] All (new and existing) tests have run locally without falling over
-- [ ] Build and pre-commit hooks have passed locally without warnings or errors
+
+- [ ] Tests accompany or reflect changes to the code
+- [ ] Tests ran and passed locally
+- [ ] Ran the linter and formatter
+- [ ] Build and pre-commit hooks have passed locally
 - [ ] Relevant documentation has been updated
