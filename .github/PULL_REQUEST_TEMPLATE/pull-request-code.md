@@ -54,5 +54,4 @@ Closes Issue ...
 - [ ] Tests accompany or reflect changes to the code
 - [ ] Tests ran and passed locally
 - [ ] Ran the linter and formatter
-- [ ] Build and pre-commit hooks have passed locally
 - [ ] Relevant documentation has been updated

@@ -25,6 +25,5 @@ Closes Issue ...
 - [ ] Spell-check
     - [ ] US
     - [ ] UK
-- [ ] Pre-commit hooks have passed locally without warnings or errors
 - [ ] Did the page(s) preview correctly on your machine without breaking
 - [ ] New category words (keywords) (if any) added to the code snippet file
