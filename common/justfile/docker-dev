@@ -33,8 +33,8 @@ update-migrations:
 
 # Lint using Ruff - requires ruff-lsp to be installed
 lint-python:
-  ruff check --fix .
+  poetry run ruff check --fix .
 
 # Format using Ruff - requires ruff-lsp to be installed
 format-python:
-  ruff format .
+  poetry run ruff format .
