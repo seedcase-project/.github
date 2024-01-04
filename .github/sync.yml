@@ -26,7 +26,7 @@ group:
   - files:
       - source: common/python-style.yml
         dest: .github/workflows/python-style.yml
-      - source: common/justfile/docker-dev
+      - source: common/justfile/django
         dest: justfile
     repos: |
       seedcase-project/seedcase-sprout
