@@ -29,3 +29,8 @@ lint-python:
 format-python:
   poetry run ruff format .
 
+# Builds and starts a development web server for the Django app (at http://localhost:8000)
+start-app:
+  poetry run python ./manage.py runserver
+  # Not sure if this works for others?
+  # xdg-open http://localhost:8000
