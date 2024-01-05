@@ -1,3 +1,11 @@
+# PR Template
+
+<!-- This template covers all PRs for Seedcase, please note that if you are: 
+a/ submitting a PR for changes to general documentation you should delete the sections
+Testing, Code Documentation, and the first part of the Author Checklist
+b/ submitting a PR for changes to code you should delete the second section of the
+Author Checklist -->
+
 ## Description
 
 <!-- DO NOT LEAVE THIS SECTION BLANK -->
@@ -35,7 +43,6 @@ Closes Issue ...
 ## Testing
 
 - [ ] Yes
-- [ ] No, general documentation only
 - [ ] No, not needed (give a reason below)
 - [ ] No, I need help writing them
 
