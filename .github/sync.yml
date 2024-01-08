@@ -19,6 +19,7 @@ group:
       seedcase-project/seedcase-sprout
       seedcase-project/seedcase-project
       seedcase-project/seedcase-theme
+      seedcase-project/community
       seedcase-project/design
       seedcase-project/team
 
@@ -40,4 +41,5 @@ group:
     repos: |
       seedcase-project/seedcase-project
       seedcase-project/design
+      seedcase-project/community
       seedcase-project/team
