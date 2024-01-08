@@ -18,7 +18,7 @@
 		"scope": "quarto,markdown",
 		"prefix": "TODO",
 		"body": [
-			"<!--TODO ${0:Write text here}-->"
+			"<!-- TODO: ${0:Write text here} -->"
 		],
 		"description": "Insert TODO formatting"
 	}
