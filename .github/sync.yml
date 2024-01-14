@@ -22,6 +22,7 @@ group:
       seedcase-project/community
       seedcase-project/design
       seedcase-project/team
+      seedcase-project/data
 
   # Python Django project repositories
   - files:
