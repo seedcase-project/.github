@@ -7,8 +7,8 @@ group:
         dest: .editorconfig
       - source: .gitignore
         dest: .gitignore
-      - source: .vscode/quarto.code-snippets
-        dest: .vscode/quarto.code-snippets
+      - source: .vscode/json.code-snippets
+        dest: .vscode/json.code-snippets
       - source: .vscode/settings.json
         dest: .vscode/settings.json
       - source: .vscode/extensions.json
@@ -23,6 +23,7 @@ group:
       seedcase-project/design
       seedcase-project/team
       seedcase-project/data
+      seedcase-project/decisions
 
   # Python Django project repositories
   - files:
@@ -44,3 +45,4 @@ group:
       seedcase-project/design
       seedcase-project/community
       seedcase-project/team
+      seedcase-project/decisions
