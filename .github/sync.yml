@@ -7,8 +7,8 @@ group:
         dest: .editorconfig
       - source: .gitignore
         dest: .gitignore
-      - source: .vscode/quarto.code-snippets
-        dest: .vscode/quarto.code-snippets
+      - source: .vscode/json.code-snippets
+        dest: .vscode/json.code-snippets
       - source: .vscode/settings.json
         dest: .vscode/settings.json
       - source: .vscode/extensions.json
