@@ -36,6 +36,9 @@ See also Issues #...
 <!-- Please explain why the tests are not needed for this PR here -->
 
 ## Reviewer Focus
+<!-- Please delete as appropriate: -->
+This PR only needs a quick review.
+This PR requires an in-depth review.
 
 <!-- Any particular section the reviewer should focus on, anywhere that would be a good place to start? -->
 
