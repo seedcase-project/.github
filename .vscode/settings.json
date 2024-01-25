@@ -2,7 +2,7 @@
   "files.autoSave": "onFocusChange",
   "editor.tabSize": 2,
   "editor.wordWrap": "off",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "git.autofetch": false,
   "quarto.visualEditor.markdownWrap": "column",
   "quarto.visualEditor.markdownWrapColumn": 72,
@@ -22,5 +22,7 @@
     "test", // Adding missing tests or correcting existing tests
     "chore", // Misc things, like renaming or deleting files
   ],
-  "conventional-branch.format": "{Type}/{Branch}"
+  "conventional-branch.format": "{Type}/{Branch}",
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "isort.check": true
 }
