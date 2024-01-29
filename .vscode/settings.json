@@ -12,7 +12,7 @@
   "editor.tabCompletion": "on",
   "editor.snippetSuggestions": "inline",
   "conventional-branch.type": [
-    "build",  // Changes that affect the build system or external dependencies
+    "build", // Changes that affect the build system or external dependencies
     "ci", // Changes to our CI configuration files and scripts
     "docs", // Documentation only changes
     "feat", // A new feature
@@ -23,6 +23,7 @@
     "chore", // Misc things, like renaming or deleting files
   ],
   "conventional-branch.format": "{Type}/{Branch}",
-  "editor.defaultFormatter": "charliermarsh.ruff",
-  "isort.check": true
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  }
 }
