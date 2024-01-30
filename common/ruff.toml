@@ -11,7 +11,7 @@ extend-select = [
   # Add rule that all functions have docstrings.
   "D",
   # Add isort to list.
-  "I
+  "I"
 ]
 
 [lint.pydocstyle]
