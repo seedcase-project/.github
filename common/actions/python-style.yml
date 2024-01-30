@@ -1,10 +1,10 @@
-name: Style Python Code
+name: Style and Format Python Code
 
-on: push
+on: [ push, pull_request ]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: psf/black@stable
+      - uses: actions/checkout@v4
+      - uses: chartboost/ruff-action@v1

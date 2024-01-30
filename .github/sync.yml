@@ -31,6 +31,8 @@ group:
         dest: .github/workflows/python-style.yml
       - source: common/justfile/django
         dest: justfile
+      - source: common/ruff.toml
+        dest: ruff.toml
     repos: |
       seedcase-project/seedcase-sprout
 
