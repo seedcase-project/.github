@@ -21,9 +21,13 @@ stop-docker:
 update-migrations:
   poetry run python manage.py makemigrations
 
-# Run Python linter to check for any errors in the code
-lint-python:
-  poetry run ruff check --fix .
+# Run Django tests
+run-tests:
+  poetry run python manage.py test
+
+# Check Python code with the linter for any errors that need manual attention
+check-python:
+  poetry run ruff check .
 
 # Reformat Python code to match coding style and general structure
 format-python:
