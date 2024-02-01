@@ -13,6 +13,8 @@ group:
         dest: .vscode/settings.json
       - source: .vscode/extensions.json
         dest: .vscode/extensions.json
+      - source: .github/pull_request_template.md
+        dest: .github/pull_request_template.md
       - source: .github/workflows/auto-author-assign.yml
         dest: .github/workflows/auto-author-assign.yml
     repos: |
