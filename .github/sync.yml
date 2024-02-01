@@ -29,6 +29,8 @@ group:
   - files:
       - source: common/python-style.yml
         dest: .github/workflows/python-style.yml
+      - source: .vscode/python.code-snippets
+        dest: .vscode/python.code-snippets
       - source: common/justfile/django
         dest: justfile
       - source: common/ruff.toml
