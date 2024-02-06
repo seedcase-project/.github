@@ -8,7 +8,7 @@
   "quarto.visualEditor.markdownWrapColumn": 72,
   "autoDocstring.docstringFormat": "google",
   "autoDocstring.includeName": false,
-  "autoDocstring.startOnNewLine": true,
+  "autoDocstring.startOnNewLine": false,
   "editor.tabCompletion": "on",
   "editor.snippetSuggestions": "inline",
   "conventional-branch.type": [
