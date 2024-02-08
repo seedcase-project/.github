@@ -27,7 +27,13 @@ group:
 
   # Python Django project repositories
   - files:
-      - source: common/python-style.yml
+      - source: common/actions/fly-deploy-pr.yml
+        dest: .github/workflows/fly-deploy-pr.yml
+      - source: common/actions/fly-deploy.yml
+        dest: .github/workflows/fly-deploy.yml
+      - source: common/actions/test.yml
+        dest: .github/workflows/test.yml
+      - source: common/actions/python-style.yml
         dest: .github/workflows/python-style.yml
       - source: .vscode/python.code-snippets
         dest: .vscode/python.code-snippets
