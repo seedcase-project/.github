@@ -1,8 +1,8 @@
+name: Build and deploy website
+
 on:
   push:
     branches: main
-
-name: Render and Publish
 
 jobs:
   build-deploy:
