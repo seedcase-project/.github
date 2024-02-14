@@ -1,4 +1,4 @@
-name: Deploy to Fly.io
+name: Deploy Demo App
 
 # Only trigger when pushed/merged to main and after running the tests actions.
 on:

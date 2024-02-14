@@ -1,5 +1,5 @@
 # From: https://github.com/superfly/fly-pr-review-apps
-name: Staging App
+name: Deploy PR Preview App
 
 on:
   workflow_run:

@@ -29,14 +29,14 @@ group:
 
   # Python Django project repositories
   - files:
-      - source: common/actions/fly-deploy-pr.yml
-        dest: .github/workflows/fly-deploy-pr.yml
-      - source: common/actions/fly-deploy.yml
-        dest: .github/workflows/fly-deploy.yml
+      - source: common/actions/deploy-pr-preview.yml
+        dest: .github/workflows/deploy-pr-preview.yml
+      - source: common/actions/deploy-demo.yml
+        dest: .github/workflows/deploy-demo.yml
       - source: common/actions/test.yml
         dest: .github/workflows/test.yml
-      - source: common/actions/python-style.yml
-        dest: .github/workflows/python-style.yml
+      - source: common/actions/lint-python.yml
+        dest: .github/workflows/lint-python.yml
       - source: .vscode/python.code-snippets
         dest: .vscode/python.code-snippets
       - source: common/justfile/django
@@ -52,6 +52,8 @@ group:
         dest: justfile
       - source: common/devcontainers/web.json
         dest: .devcontainer/devcontainer.json
+      - source: .github/workflows/deploy-website.yml
+        dest: .github/workflows/deploy-website.yml
     repos: |
       seedcase-project/seedcase-project
       seedcase-project/design
