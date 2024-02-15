@@ -9,6 +9,7 @@
   "autoDocstring.docstringFormat": "google",
   "autoDocstring.includeName": false,
   "autoDocstring.startOnNewLine": false,
+  "autoDocstring.customTemplatePath": ".vscode/google-notypes.mustache",
   "editor.tabCompletion": "on",
   "editor.snippetSuggestions": "inline",
   "conventional-branch.type": [
