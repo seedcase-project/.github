@@ -50,6 +50,8 @@ group:
         dest: justfile
       - source: common/ruff.toml
         dest: ruff.toml
+      - source: common/LICENSE.md
+        dest: LICENSE.md
     repos: |
       seedcase-project/seedcase-sprout
 
