@@ -29,6 +29,7 @@ group:
 
   # Python Django project repositories
   - files:
+      # Actions
       - source: common/actions/deploy-pr-preview.yml
         dest: .github/workflows/deploy-pr-preview.yml
       - source: common/actions/deploy-demo.yml
@@ -37,8 +38,14 @@ group:
         dest: .github/workflows/test.yml
       - source: common/actions/lint-python.yml
         dest: .github/workflows/lint-python.yml
+      
+      # VSCode Settings
+      - source: .vscode/google-notypes.mustache
+        dest: .vscode/google-notypes.mustache
       - source: .vscode/python.code-snippets
         dest: .vscode/python.code-snippets
+      
+      # Misc
       - source: common/justfile/django
         dest: justfile
       - source: common/ruff.toml
