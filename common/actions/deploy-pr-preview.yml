@@ -1,8 +1,9 @@
 # From: https://github.com/superfly/fly-pr-review-apps
 name: Deploy PR Preview App
 
-on:
-  pull_request:
+on:  
+  pull_request:  
+    types: [opened, reopened, synchronize, closed]  
     branches:
       - main
 
