@@ -19,7 +19,7 @@ stop-docker:
 
 # Update the Django migration files
 update-migrations: install-deps
-  poetry run python manage.py makemigrations
+  yes | poetry run python manage.py makemigrations
   poetry run python manage.py migrate
 
 # Run Django tests
