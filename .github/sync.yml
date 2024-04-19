@@ -34,6 +34,8 @@ group:
         dest: .github/workflows/deploy-pr-preview.yml
       - source: common/actions/deploy-demo.yml
         dest: .github/workflows/deploy-demo.yml
+      - source: common/actions/deploy-docs.yml
+        dest: .github/workflows/deploy-docs.yml
       
       # VSCode Settings
       - source: .vscode/google-notypes.mustache
