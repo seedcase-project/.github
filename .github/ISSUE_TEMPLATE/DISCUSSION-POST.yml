@@ -1,0 +1,29 @@
+name: Discussion post
+description: Start a discussion with the Seedcase team
+title: "[discussion]: <title>"
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this discussion post.
+
+        When starting the discussion please cover the following two items  
+        1) state the challenge that has prompted the discussion
+        2) state any potential solutions with pros and cons
+        
+  - type: textarea
+    id: user-story
+    attributes:
+      label: What would you like to discuss?
+      value: ""
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/seedcase-project/.github/blob/main/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

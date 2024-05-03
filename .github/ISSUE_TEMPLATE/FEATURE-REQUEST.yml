@@ -29,7 +29,7 @@ body:
         If relevant, please present a concise description of your preferred solution. 
         Things to address include:
         * Details of the technical implementation
-        * Tradeoffs made in design decisions
+        * Trade-offs made in design decisions
         * Caveats and considerations for the future
     validations: 
       required: false
