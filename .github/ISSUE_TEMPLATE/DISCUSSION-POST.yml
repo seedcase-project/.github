@@ -17,7 +17,7 @@ body:
     id: user-story
     attributes:
       label: What would you like to discuss?
-      value: ""
+      value: "Please start your discussion here."
     validations:
       required: true
   - type: markdown
