@@ -75,7 +75,6 @@ body:
         - "1: High/Critical"
         - "2: Medium"
         - "3: Minor"
-      required: false
   - type: markdown
     attributes:
       value: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/seedcase-project/.github/blob/main/CODE_OF_CONDUCT.md).
