@@ -32,5 +32,8 @@
   },
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
   "python.languageServer": "Pylance",
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true, 
+  "cSpell.enableFiletypes": [
+  "quarto"
+  ],
 }
