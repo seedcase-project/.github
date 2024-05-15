@@ -34,6 +34,6 @@
   "python.languageServer": "Pylance",
   "files.insertFinalNewline": true, 
   "cSpell.enableFiletypes": [
-  "quarto"
+  	"quarto"
   ],
 }
