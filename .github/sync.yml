@@ -42,6 +42,8 @@ group:
         dest: .vscode/google-notypes.mustache
       - source: .vscode/python.code-snippets
         dest: .vscode/python.code-snippets
+      - source: .vscode/launch.json
+        dest: .vscode/launch.json
       
       # Misc
       - source: common/justfile/django
