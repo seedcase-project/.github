@@ -30,6 +30,8 @@ group:
   # Python Django project repositories
   - files:
       # Actions
+      - source: common/actions/dependabot.yml
+        dest: .github/dependabot.yml
       - source: common/actions/deploy-pr-preview.yml
         dest: .github/workflows/deploy-pr-preview.yml
       - source: common/actions/deploy-demo.yml
