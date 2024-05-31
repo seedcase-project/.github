@@ -19,7 +19,7 @@ group:
         dest: .github/workflows/auto-author-assign.yml
     repos: |
       seedcase-project/seedcase-sprout
-      seedcase-project/seedcase-project
+      seedcase-project/seedcase-website
       seedcase-project/seedcase-theme
       seedcase-project/community
       seedcase-project/design
@@ -66,7 +66,7 @@ group:
       - source: .github/workflows/deploy-website.yml
         dest: .github/workflows/deploy-website.yml
     repos: |
-      seedcase-project/seedcase-project
+      seedcase-project/seedcase-website
       seedcase-project/design
       seedcase-project/community
       seedcase-project/team
