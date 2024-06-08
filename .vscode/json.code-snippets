@@ -106,7 +106,7 @@
   // Much the same way that words can be added to the spell-check extension.
   "Insert list of category words": {
     "scope": "quarto,markdown,yaml",
-    "prefix": "category_keywords",
+    "prefix": "decision_categories",
     "body": [
       "- backend",
       "- code snippets",
