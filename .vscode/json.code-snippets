@@ -110,12 +110,12 @@
     "body": [
       "- backend",
       "- code snippets",
-      "- communication",
+      "- communicate",
       "- container",
-      "- contributing",
-      "- collaboration",
+      "- contribute",
+      "- collaborate",
       "- database",
-      "- deploying",
+      "- deploy",
       "- dependencies",
       "- development",
       "- documentation",
@@ -123,14 +123,14 @@
       "- framework",
       "- git",
       "- installation",
-      "- licensing",
+      "- license",
       "- management",
       "- organization",
       "- standardisation",
       "- style",
       "- web",
       "- workflow",
-      "- writing"
+      "- write"
     ],
     "description": "Insert list of category words"
   }
