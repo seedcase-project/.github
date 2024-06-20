@@ -100,7 +100,7 @@
     ],
     "description": "Insert paneltab (including two tabs here). If you want additional tabs, just include more headers."
   },
-  // All our key words are included in this code snippet
+  // All our category words are included in this code snippet
   // The idea is that we can insert this section and then delete the words we aren't interested in
   // If words are missing then they can be added to the document, and then also added to the code snippet
   // Much the same way that words can be added to the spell-check extension.
@@ -119,7 +119,7 @@
       "- dependencies",
       "- development",
       "- documentation",
-      "- frontend",
+      "- front end",
       "- framework",
       "- git",
       "- installation",
