@@ -2,6 +2,9 @@ name: Deploy documentation as website
 
 on:
   workflow_call:
+    secrets:
+      netlify-token:
+        required: true
 
 jobs:
   build-deploy:
@@ -28,4 +31,4 @@ jobs:
         with:
           path: docs
           target: netlify
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.netlify-token }}
