@@ -8,6 +8,10 @@ on:
     types:
       - opened
 
+permissions:
+  pull-requests: write
+  issues: write
+
 jobs:
   add-to-project:
     uses: seedcase-project/.github/.github/workflows/add-to-project-action.yml@main
