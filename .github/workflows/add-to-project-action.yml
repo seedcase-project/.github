@@ -1,0 +1,29 @@
+name: Add to project board (re-usable action)
+
+on:
+  workflow_call:
+    secrets:
+      gh-token:
+        required: true
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: write
+    env:
+      BOARD: "Team project planning"
+      GH_TOKEN: ${{ secrets.gh-token }}
+    steps:
+      - name: Add issue to project board
+        if: ${{ github.event_name == 'issue' }}
+        run: gh issue edit $ISSUE --add-project $BOARD
+        env:
+          ISSUE: ${{ github.event.issue.html_url }}
+
+      - name: Add PR to project board
+        if: ${{ github.event_name == 'pull_request' }}
+        run: gh pr edit $PR --add-project $BOARD --add-assignee @me
+        env:
+          PR: ${{ github.event.pull_request.html_url }}
