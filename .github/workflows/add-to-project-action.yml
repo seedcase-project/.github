@@ -9,9 +9,6 @@ on:
 jobs:
   add-to-project:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      issues: write
     env:
       BOARD: "Team project planning"
       GH_TOKEN: ${{ secrets.gh-token }}
