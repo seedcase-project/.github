@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: Add issue to project board
         if: ${{ github.event_name == 'issue' }}
-        run: gh issue edit $ISSUE --add-project $BOARD
+        run: gh issue edit $ISSUE --add-project "$BOARD"
         env:
           ISSUE: ${{ github.event.issue.html_url }}
 
       - name: Add PR to project board
         if: ${{ github.event_name == 'pull_request' }}
-        run: gh pr edit $PR --add-project $BOARD --add-assignee @me
+        run: gh pr edit $PR --add-project "$BOARD" --add-assignee @me
         env:
           PR: ${{ github.event.pull_request.html_url }}
