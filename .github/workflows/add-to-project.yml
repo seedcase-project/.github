@@ -17,7 +17,7 @@ jobs:
         uses: actions/add-to-project@v1.0.2
         if: ${{ github.event_name == 'issues' }}
         with: 
-          project_url: https://github.com/orgs/seedcase-project/projects/18
+          project-url: https://github.com/orgs/seedcase-project/projects/18
           github-token: ${{ secrets.ADD_TO_BOARD }}
 
       - name: Assign PR to creator
