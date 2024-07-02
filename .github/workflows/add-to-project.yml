@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add issue or PR to project board
-        uses: actions/add-to-project@v1
+        uses: actions/add-to-project@v1.0.2
         if: ${{ github.event_name == 'issues' }}
         with: 
           project_url: https://github.com/orgs/seedcase-project/projects/18
