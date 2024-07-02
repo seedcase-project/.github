@@ -15,8 +15,8 @@ group:
         dest: .vscode/extensions.json
       - source: .github/pull_request_template.md
         dest: .github/pull_request_template.md
-      - source: .github/workflows/auto-author-assign.yml
-        dest: .github/workflows/auto-author-assign.yml
+      - source: .github/workflows/add-to-project.yml
+        dest: .github/workflows/add-to-project.yml
     repos: |
       seedcase-project/seedcase-sprout
       seedcase-project/seedcase-website
