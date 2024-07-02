@@ -13,11 +13,8 @@ jobs:
       BOARD: "Team project planning"
       GH_TOKEN: ${{ secrets.gh-token }}
     steps:
-      - name: test
-        run: echo "This is ${{ github.event_name }}"
-
       - name: Add issue to project board
-        if: ${{ github.event_name == 'issue' }}
+        if: ${{ github.event_name == 'issues' }}
         run: gh issue edit $ISSUE --add-project "$BOARD"
         env:
           ISSUE: ${{ github.event.issue.html_url }}
