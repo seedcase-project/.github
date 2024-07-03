@@ -63,7 +63,7 @@ group:
         dest: justfile
       - source: common/devcontainers/web.json
         dest: .devcontainer/devcontainer.json
-      - source: .github/workflows/deploy-website.yml
+      - source: common/actions/deploy-website.yml
         dest: .github/workflows/deploy-website.yml
     repos: |
       seedcase-project/seedcase-website
