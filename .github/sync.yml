@@ -38,7 +38,7 @@ group:
         dest: .github/workflows/deploy-demo.yml
       - source: common/actions/deploy-docs.yml
         dest: .github/workflows/deploy-docs.yml
-      
+
       # VSCode Settings
       - source: .vscode/google-notypes.mustache
         dest: .vscode/google-notypes.mustache
@@ -54,6 +54,8 @@ group:
         dest: ruff.toml
       - source: common/LICENSE.md
         dest: LICENSE.md
+      - source: common/templates/software-pull-request.md
+        dest: .github/pull_request_template.md
     repos: |
       seedcase-project/seedcase-sprout
 
