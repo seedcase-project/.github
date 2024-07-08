@@ -54,7 +54,7 @@ jobs:
 
       - name: Deploy preview of PR
         id: deploy
-        uses: superfly/fly-pr-review-apps@1.2.0
+        uses: superfly/fly-pr-review-apps@1.2.1
         with:
           name: ${{ github.event.repository.name }}-pr-${{ github.event.number }}
 
