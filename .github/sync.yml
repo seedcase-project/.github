@@ -13,8 +13,6 @@ group:
         dest: .vscode/settings.json
       - source: .vscode/extensions.json
         dest: .vscode/extensions.json
-      - source: .github/pull_request_template.md
-        dest: .github/pull_request_template.md
       - source: .github/workflows/add-to-project.yml
         dest: .github/workflows/add-to-project.yml
     repos: |
@@ -61,6 +59,8 @@ group:
 
   # Website repositories
   - files:
+      - source: .github/pull_request_template.md
+        dest: .github/pull_request_template.md
       - source: common/justfile/web
         dest: justfile
       - source: common/devcontainers/web.json
