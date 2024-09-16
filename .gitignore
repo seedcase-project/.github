@@ -9,14 +9,8 @@ dev/
 # Any IDE specific folders
 .idea
 
-# MacO
+# MacOS
 .DS_Store
-
-# RStudio
-.Rbuildignore
-.Rhistory
-.RData
-.Rproj.user
 
 # Quarto
 /.quarto/
