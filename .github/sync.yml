@@ -16,7 +16,6 @@ group:
       - source: .github/workflows/add-to-project.yml
         dest: .github/workflows/add-to-project.yml
     repos: |
-      seedcase-project/seedcase-sprout
       seedcase-project/seedcase-website
       seedcase-project/seedcase-theme
       seedcase-project/community
@@ -24,38 +23,6 @@ group:
       seedcase-project/team
       seedcase-project/data
       seedcase-project/decisions
-
-  # Python Django project repositories
-  - files:
-      # Actions
-      - source: common/actions/dependabot.yml
-        dest: .github/dependabot.yml
-      - source: common/actions/deploy-pr-preview.yml
-        dest: .github/workflows/deploy-pr-preview.yml
-      - source: common/actions/deploy-demo.yml
-        dest: .github/workflows/deploy-demo.yml
-      - source: common/actions/deploy-docs.yml
-        dest: .github/workflows/deploy-docs.yml
-
-      # VSCode Settings
-      - source: .vscode/google-notypes.mustache
-        dest: .vscode/google-notypes.mustache
-      - source: .vscode/python.code-snippets
-        dest: .vscode/python.code-snippets
-      - source: .vscode/launch.json
-        dest: .vscode/launch.json
-      
-      # Misc
-      - source: common/justfile/django
-        dest: justfile
-      - source: common/ruff.toml
-        dest: ruff.toml
-      - source: common/LICENSE.md
-        dest: LICENSE.md
-      - source: common/templates/software-pull-request.md
-        dest: .github/pull_request_template.md
-    repos: |
-      seedcase-project/seedcase-sprout
 
   # Website repositories
   - files:
