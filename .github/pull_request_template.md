@@ -1,6 +1,6 @@
 ## Description
 
-These changes are done for PURPOSE, because REASON.
+These changes PURPOSE, because REASON.
 
 Closes #
 
@@ -13,4 +13,3 @@ This PR needs a quick/in-depth review. Focus on CHANGES.
 
 - [ ] Ran spell-check
 - [ ] Formatted Markdown
-- [ ] Rendered website locally
