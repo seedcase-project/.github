@@ -1,13 +1,3 @@
-# All members on Developers team get added to review PRs
-* @seedcase-project/developers
+# All members on Admin team get added to review PRs
 
-# Ignore these so we don't get added to sync PRs
-/.github/
-/.vscode/
-/.devcontainer/
-justfile
-.editorconfig
-.gitignore
-ruff.toml
-pyproject.toml
-poetry.lock
+* @seedcase-project/admin
