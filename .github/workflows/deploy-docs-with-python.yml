@@ -23,7 +23,7 @@ jobs:
         run: |
           pip install poetry
           pip install poetry-plugin-export
-          poetry export -o requirements.txt
+          poetry export --with docs -o requirements.txt
           pip install -r requirements.txt
 
       - name: Set up Quarto
