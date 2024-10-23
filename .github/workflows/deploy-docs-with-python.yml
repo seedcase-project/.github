@@ -13,18 +13,18 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install Poetry
-        run: pipx install poetry
-
       - name: Install Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: 'pip'
 
-      - name: Install dependencies with Poetry
+      - name: Install Poetry and dependencies
         run: |
-          poetry config virtualenvs.create false
-          poetry install --no-interaction
+          pip install poetry
+          pip install poetry-plugin-export
+          poetry export -o requirements.txt
+          pip install -r requirements.txt
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
