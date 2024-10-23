@@ -25,10 +25,15 @@ jobs:
       - name: Install dependencies with Poetry
         run: poetry install --no-interaction
 
+      - name: Activate venv for Quarto
+        run: |
+          source .venv/bin/activate/
+          export QUARTO_PYTHON=.venv/bin/python3
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # add software dependencies here
+      # add other software dependencies here
 
       - name: Publish to Netlify (and render)
         uses: quarto-dev/quarto-actions/publish@v2
