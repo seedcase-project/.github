@@ -23,6 +23,7 @@ group:
       seedcase-project/team
       seedcase-project/data
       seedcase-project/decisions
+      seedcase-project/spaid
 
   # Website repositories
   - files:
