@@ -29,7 +29,8 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # add other software dependencies here
+      - name: Build function reference docs
+        run: python -m quartodoc build
 
       - name: Publish to Netlify (and render)
         uses: quarto-dev/quarto-actions/publish@v2
