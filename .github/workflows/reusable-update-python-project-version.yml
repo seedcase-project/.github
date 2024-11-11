@@ -1,0 +1,30 @@
+name: Update Python project's version
+
+on:
+  workflow_call:
+    secrets:
+      # Needs read and write contents permission to push to main.
+      # Protected main can't have "Do not allow bypassing the settings" option set.
+      update-version-gh-token:
+        required: true
+
+jobs:
+  update-version:
+    if: "!startsWith(github.event.head_commit.message, 'build(version): ')"
+    runs-on: ubuntu-latest
+    name: "Update project's version"
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+        with:
+          # Only need the last commit from the repo.
+          fetch-depth: 0
+          token: "${{ secrets.update-version-gh-token }}"
+      - id: cz
+        name: Update version
+        uses: commitizen-tools/commitizen-action@0.22.0
+        with:
+          github_token: ${{ secrets.update-update-version-gh-token }}
+          # Not yet.
+          changelog: false
+
