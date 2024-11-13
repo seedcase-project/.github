@@ -24,7 +24,7 @@ jobs:
         name: Update version
         uses: commitizen-tools/commitizen-action@0.22.0
         with:
-          github_token: ${{ secrets.update-update-version-gh-token }}
+          github_token: ${{ secrets.update-version-gh-token }}
           # Not yet.
           changelog: false
 
