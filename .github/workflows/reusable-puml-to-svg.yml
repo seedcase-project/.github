@@ -7,7 +7,7 @@ on:
         required: true
 
 jobs:
-  generate-plantuml:
+  generate-svg-from-puml:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
