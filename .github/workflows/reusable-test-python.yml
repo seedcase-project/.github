@@ -1,10 +1,10 @@
-name: Run Tests
+name: Run Python tests
 
 on:
   workflow_call:
 
 jobs:
-  django-test:
+  test-python:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
