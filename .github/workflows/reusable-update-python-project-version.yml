@@ -1,4 +1,4 @@
-name: Update Python project's version
+name: Update Python project's version and changelog
 
 on:
   workflow_call:
@@ -9,7 +9,7 @@ on:
         required: true
 
 jobs:
-  update-version:
+  update-version-and-changelog:
     if: "!startsWith(github.event.head_commit.message, 'build(version): ')"
     runs-on: ubuntu-latest
     name: "Update project's version"
@@ -21,10 +21,9 @@ jobs:
           fetch-depth: 0
           token: "${{ secrets.update-version-gh-token }}"
       - id: cz
-        name: Update version
+        name: Update version and changelog
         uses: commitizen-tools/commitizen-action@0.22.0
         with:
           github_token: ${{ secrets.update-version-gh-token }}
-          # Not yet.
-          changelog: false
+          changelog: true
 
