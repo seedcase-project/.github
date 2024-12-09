@@ -22,7 +22,7 @@ jobs:
           token: "${{ secrets.update-version-gh-token }}"
       - id: cz
         name: Update version and changelog
-        uses: commitizen-tools/commitizen-action@0.22.0
+        uses: commitizen-tools/commitizen-action@0.23.0
         with:
           github_token: ${{ secrets.update-version-gh-token }}
           changelog: true
