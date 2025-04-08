@@ -13,26 +13,30 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install Python
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          # Install a specific version of uv.
+          # uv recommends to set the version for best practice.
+          version: "0.6.13"
+          # To have a faster CI time, enable cache between runs.
+          enable-cache: true
+          # Reset the cache if the lock file changes.
+          cache-dependency-glob: "uv.lock"
+
+      - name: "Set up Python"
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-          cache: 'pip'
+          python-version-file: "pyproject.toml"
 
-      - name: Install Poetry and dependencies
-        run: |
-          pip install poetry
-          pip install poetry-plugin-export
-          poetry export --with docs -o requirements.txt
-          pip install -r requirements.txt
-          # Install the local package
-          pip install .
+      - name: Install the project and it's dependencies
+        run: uv sync --all-extras --dev
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Build function reference docs
-        run: python -m quartodoc build
+        run: uv python -m quartodoc build
 
       - name: Publish to Netlify (and render)
         uses: quarto-dev/quarto-actions/publish@v2
