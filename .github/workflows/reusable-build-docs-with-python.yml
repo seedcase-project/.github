@@ -9,6 +9,8 @@ on:
 jobs:
   build-website:
     runs-on: ubuntu-latest
+    env:
+        QUARTO_PYTHON: ".venv/bin/python3"
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
