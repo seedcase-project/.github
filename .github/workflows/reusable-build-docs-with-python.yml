@@ -36,7 +36,7 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Build function reference docs
-        run: uv python -m quartodoc build
+        run: uv run quartodoc build
 
       - name: Publish to Netlify (and render)
         uses: quarto-dev/quarto-actions/publish@v2
