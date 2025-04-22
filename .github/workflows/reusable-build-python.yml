@@ -38,6 +38,11 @@ jobs:
       - name: Run tests and coverage
         run: just test-python
 
+      - name: Prepare repo for coverage report
+        run: |
+            # So that folder can be committed
+            rm htmlcov/.gitignore
+
       - name: Push coverage report and badge to branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
