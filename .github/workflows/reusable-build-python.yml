@@ -1,10 +1,10 @@
-name: Run Python tests
+name: Check, test, and build Python package
 
 on:
   workflow_call:
 
 jobs:
-  test-python:
+  build-python:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
