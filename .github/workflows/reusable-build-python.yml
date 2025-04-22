@@ -43,6 +43,8 @@ jobs:
         with:
           branch: coverage
           folder: htmlcov
+          # Keep a simple Git history
+          single-commit: true
 
 
 
