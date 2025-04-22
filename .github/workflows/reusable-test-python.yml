@@ -21,13 +21,28 @@ jobs:
           # Reset the cache if the lock file changes.
           cache-dependency-glob: "uv.lock"
 
-      - name: "Set up Python"
+      - name: Install justfile
+        run: apt-get install -y just
+
+      - name: Install Python
         uses: actions/setup-python@v5
         with:
           python-version-file: "pyproject.toml"
 
       - name: Install the project and it's dependencies
-        run: uv sync --all-extras --dev
+        run: just install-deps
 
-      - name: Run unit tests
-        run: uv run pytest
+      - name: Check Python style
+        run: just check-python
+
+      - name: Run tests and coverage
+        run: just test-python
+
+      - name: Push coverage report and badge to branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: coverage
+          folder: htmlcov
+
+
+
