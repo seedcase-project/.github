@@ -22,7 +22,7 @@ jobs:
           cache-dependency-glob: "uv.lock"
 
       - name: Install justfile
-        run: apt-get install -y just
+        run: sudo apt-get install -y just
 
       - name: Install Python
         uses: actions/setup-python@v5
@@ -42,6 +42,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: coverage
+            just create-coverage-badge
           folder: htmlcov
 
 
