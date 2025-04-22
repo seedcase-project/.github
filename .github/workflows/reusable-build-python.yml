@@ -51,5 +51,7 @@ jobs:
           # Keep a simple Git history
           single-commit: true
 
+      - name: Run security checks
+        run: just check-security
 
 
