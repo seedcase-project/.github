@@ -54,4 +54,7 @@ jobs:
       - name: Run security checks
         run: just check-security
 
+      - name: Run spell checker
+        run: just check-spelling
+
 
