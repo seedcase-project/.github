@@ -39,6 +39,9 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Spell check repo
+        uses: crate-ci/typos@v1.31.1
+
       - name: Build function reference docs
         run: uv run quartodoc build
 
