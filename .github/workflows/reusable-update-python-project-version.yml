@@ -2,9 +2,13 @@ name: Update Python project's version and changelog
 
 on:
   workflow_call:
+    inputs:
+      # The GitHub App that has been given permission to push to repo.
+      app-id:
+        type: "string"
+        required: true
     secrets:
       # Needs read and write contents permission to push to main.
-      # Protected main can't have "Do not allow bypassing the settings" option set.
       update-version-gh-token:
         required: true
 
@@ -14,16 +18,33 @@ jobs:
     runs-on: ubuntu-latest
     name: "Update project's version and changelog"
     steps:
-      - name: Check out
+      - uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ inputs.app-id }}
+          private-key: ${{ secrets.update-version-gh-token }}
+
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           # Only need the last commit from the repo.
           fetch-depth: 0
-          token: "${{ secrets.update-version-gh-token }}"
+          token: ${{ steps.app-token.outputs.token }}
+
+      - name: Set User
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Push version and tag
+        run: |
+          npm version ${{ github.event.inputs.version }}
+          git push
+
       - id: cz
         name: Update version and changelog
         uses: commitizen-tools/commitizen-action@0.24.0
         with:
-          github_token: ${{ secrets.update-version-gh-token }}
+          github_token: ${{ steps.app-token.outputs.token }}
           changelog: true
 
