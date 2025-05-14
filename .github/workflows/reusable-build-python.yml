@@ -57,4 +57,7 @@ jobs:
       - name: Run spell checker
         run: just check-spelling
 
+      - name: Run unused code checker
+        run: just check-unused
+
 
