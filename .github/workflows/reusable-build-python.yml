@@ -59,5 +59,3 @@ jobs:
 
       - name: Run unused code checker
         run: just check-unused
-
-
