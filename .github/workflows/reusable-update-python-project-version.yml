@@ -48,3 +48,9 @@ jobs:
           github_token: ${{ steps.app-token.outputs.token }}
           changelog: true
 
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          # env variable containing the new version, created by the Commitizen action
+          tag_name : ${{ env.REVISION }}
