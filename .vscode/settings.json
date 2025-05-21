@@ -20,8 +20,4 @@
   ],
   "conventional-branch.format": "{Type}/{Branch}",
   "files.insertFinalNewline": true,
-  "cSpell.enableFiletypes": [
-    "quarto"
-  ],
-  "cSpell.language": "en,en-GB",
 }
