@@ -15,7 +15,7 @@ jobs:
         with:
           # Install a specific version of uv.
           # uv recommends to set the version for best practice.
-          version: "0.6.13"
+          version: "6.0.1"
           # To have a faster CI time, enable cache between runs.
           enable-cache: true
           # Reset the cache if the lock file changes.
