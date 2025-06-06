@@ -1,4 +1,4 @@
-name: Build website for documentation that has Python code
+name: Build website
 
 on:
   workflow_call:

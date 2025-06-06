@@ -1,4 +1,4 @@
-name: Check, test, and build Python package
+name: Check and build package
 
 on:
   workflow_call:
