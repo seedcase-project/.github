@@ -1,4 +1,4 @@
-name: Update Python project's version and changelog
+name: Release package
 
 on:
   workflow_call:

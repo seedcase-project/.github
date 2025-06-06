@@ -20,14 +20,14 @@ body:
   #     required: true
   - type: textarea
     id: steps-to-reproduce
-    attributes: 
+    attributes:
       label: Steps to reproduce
-      description: | 
+      description: |
         How do you trigger this bug? Please walk us through it step by step.
-        Use the “>” symbol to show the steps. 
-        Example: 
+        Use the “>” symbol to show the steps.
+        Example:
         1. Go to settings > Profile (this would take user to new screen)
-        2. Tap on More Options > Delete Account 
+        2. Tap on More Options > Delete Account
       value: |
         1.
         2.
@@ -37,18 +37,18 @@ body:
       required: true
   - type: textarea
     id: expected-result
-    attributes: 
+    attributes:
       label: Expected result
-      description: What should happen, when you do the steps above? 
-    validations: 
+      description: What should happen, when you do the steps above?
+    validations:
       required: true
   - type: textarea
     id: actual-result
-    attributes: 
+    attributes:
       label: Actual result (the bug)
-      description: | 
-        What actually happened, when you did the steps above? Be as 
-        specific as you can when describing this. 
+      description: |
+        What actually happened, when you did the steps above? Be as
+        specific as you can when describing this.
         If possible, include screenshots or videos here as well.
     validations:
       required: true
@@ -56,22 +56,22 @@ body:
     id: logs
     attributes:
       label: "Optional: Relevant log output"
-      description: | 
-        Please copy and paste any relevant log output. This will be automatically 
+      description: |
+        Please copy and paste any relevant log output. This will be automatically
         formatted into code, so no need for backticks.
       render: shell
     validations:
       required: false
-  - type: dropdown 
+  - type: dropdown
     id: severity-priority
-    attributes: 
-      label: Severity/Priority 
-      description: | 
+    attributes:
+      label: Severity/Priority
+      description: |
         Describe the severity of the impact the bug has on the software's functionality
         1: High/Critical: anything that impacts the user flow or blocks usage
-        2: Medium: anything that negatively affects the user experience 
+        2: Medium: anything that negatively affects the user experience
         3: Minor: everything else (e.g., typos, missing icons, layout issues, etc.)
-      options: 
+      options:
         - "1: High/Critical"
         - "2: Medium"
         - "3: Minor"
