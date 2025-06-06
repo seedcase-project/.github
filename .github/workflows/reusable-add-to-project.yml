@@ -40,8 +40,9 @@ jobs:
       - name: Assign PR to creator
         if: ${{ github.event_name == 'pull_request' }}
         run: |
-          gh pr edit $PR --add-assignee $AUTHOR --repo ${{ github.repository }}
+          gh pr edit $PR --add-assignee $AUTHOR --repo $REPO
         env:
+          REPO: ${{ github.repository }}
           AUTHOR: ${{ github.event.pull_request.user.login }}
           PR: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.gh-token }}
