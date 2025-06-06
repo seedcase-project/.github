@@ -9,10 +9,10 @@ body:
         Thanks for taking the time to fill out this discussion post.
 
         When starting the discussion please cover the following two items:
-        
+
         1. state the challenge that has prompted the discussion
         2. state any potential solutions with pros and cons
-        
+
   - type: textarea
     id: user-story
     attributes:
