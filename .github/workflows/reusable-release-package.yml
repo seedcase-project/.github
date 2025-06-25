@@ -7,16 +7,21 @@ on:
       app-id:
         type: "string"
         required: true
+      publish:
+        description: "Whether to publish to PyPI or not."
+        type: "boolean"
+        required: false
+        default: false
     secrets:
       # Needs read and write contents permission to push to main.
       update-version-gh-token:
         required: true
 
 jobs:
-  update-version-and-changelog:
+  release:
     if: "!startsWith(github.event.head_commit.message, 'build(version): ')"
     runs-on: ubuntu-latest
-    name: "Update project's version and changelog"
+    name: "Update project's version and changelog, then release to PyPI"
     steps:
       - name: Harden the runner (Audit all outbound calls)
         uses: step-security/harden-runner@002fdce3c6a235733a90a27c80493a3241e56863 # v2.12.1
@@ -54,3 +59,22 @@ jobs:
           generate_release_notes: true
           # env variable containing the new version, created by the Commitizen action
           tag_name : ${{ env.REVISION }}
+
+      # This workflow and the publish workflows are based on:
+      # - https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+      # - https://www.andrlik.org/dispatches/til-use-uv-for-build-and-publish-github-actions/
+      # - https://github.com/astral-sh/trusted-publishing-examples
+      - name: Set up uv
+        uses: astral-sh/setup-uv@445689ea25e0de0a23313031f5fe577c74ae45a1 # v6.3.0
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Build
+        # Builds dists from source and stores them in the dist/ directory.
+        run: uv build
+
+       - name: Publish distribution 📦 to PyPI
+         # Only publish if the option is explicitly set in the calling workflow.
+         if: ${{ inputs.publish }}
+         run: uv publish --trusted-publishing always
