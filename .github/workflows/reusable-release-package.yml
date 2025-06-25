@@ -69,11 +69,10 @@ jobs:
         with:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
+
       - name: Build
         # Builds dists from source and stores them in the dist/ directory.
         run: uv build
-
-
 
        - name: Publish distribution 📦 to PyPI
          # Only publish if the option is explicitly set in the calling workflow.
