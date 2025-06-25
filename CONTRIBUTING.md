@@ -1,3 +1,4 @@
-# Contributing Guidelines
+# Contributing guidelines
 
-For our contributing guidelines, please refer to the section [Contributing](https://seedcase-project.org/community/contributing) on seedcase-project.org.
+Want to contribute? Check out our [guidebook](https://guidebook.seedcase-project.org/)
+for how we work and how you can contribute.
