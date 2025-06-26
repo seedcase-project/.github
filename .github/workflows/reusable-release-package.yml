@@ -74,7 +74,7 @@ jobs:
         # Builds dists from source and stores them in the dist/ directory.
         run: uv build
 
-       - name: Publish distribution 📦 to PyPI
-         # Only publish if the option is explicitly set in the calling workflow.
-         if: ${{ inputs.publish }}
-         run: uv publish --trusted-publishing always
+      - name: Publish distribution 📦 to PyPI
+        # Only publish if the option is explicitly set in the calling workflow.
+        if: ${{ inputs.publish }}
+        run: uv publish --trusted-publishing always
