@@ -14,7 +14,7 @@ on:
 
 jobs:
   release:
-    name: "Update project's version and changelog, then release to PyPI"
+    name: "Update project's version and changelog, then make GitHub release"
     if: "!startsWith(github.event.head_commit.message, 'build(version): ')"
     runs-on: ubuntu-latest
     steps:
