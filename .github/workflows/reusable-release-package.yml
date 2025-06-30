@@ -14,9 +14,9 @@ on:
 
 jobs:
   release:
+    name: "Update project's version and changelog, then release to PyPI"
     if: "!startsWith(github.event.head_commit.message, 'build(version): ')"
     runs-on: ubuntu-latest
-    name: "Update project's version and changelog, then release to PyPI"
     steps:
       - name: Harden the runner (Audit all outbound calls)
         uses: step-security/harden-runner@002fdce3c6a235733a90a27c80493a3241e56863 # v2.12.1
