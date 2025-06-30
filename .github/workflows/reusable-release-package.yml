@@ -7,11 +7,6 @@ on:
       app-id:
         type: "string"
         required: true
-      publish:
-        description: "Whether to publish to PyPI or not."
-        type: "boolean"
-        required: false
-        default: false
     secrets:
       # Needs read and write contents permission to push to main.
       update-version-gh-token:
@@ -70,11 +65,12 @@ jobs:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
 
-      - name: Build
+      - name: Build distributions
         # Builds dists from source and stores them in the dist/ directory.
         run: uv build
 
-      - name: Publish distribution 📦 to PyPI
-        # Only publish if the option is explicitly set in the calling workflow.
-        if: ${{ inputs.publish }}
-        run: uv publish --trusted-publishing always
+      - name: Upload built distributions
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: release-dists
+          path: dist/
