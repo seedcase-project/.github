@@ -5,6 +5,8 @@ on:
     secrets:
       netlify-token:
         required: true
+      github-token:
+        required: true
 
 jobs:
   build-website:
@@ -55,3 +57,5 @@ jobs:
         with:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.netlify-token }}
+        env:
+          GH_TOKEN: ${{ secrets.github-token }}
