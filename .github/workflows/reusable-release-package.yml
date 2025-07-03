@@ -8,10 +8,13 @@ on:
         type: "string"
         required: true
     outputs:
-      # Whether the release was successful.
-      has_released:
-        value: ${{ jobs.release.outputs.has_released }}
-        description: "Whether the release was successful."
+      # The previous and current version of the package.
+      previous_version:
+        value: ${{ jobs.release.outputs.previous_version }}
+        description: "The previous version of the package."
+      current_version:
+        value: ${{ jobs.release.outputs.current_version }}
+        description: "The current version of the package. Can also be the same as previous version if no changes were made."
     secrets:
       # Needs read and write contents permission to push to main.
       update-version-gh-token:
@@ -23,7 +26,8 @@ jobs:
     if: "!startsWith(github.event.head_commit.message, 'build(version): ')"
     runs-on: ubuntu-latest
     outputs:
-      has_released: ${{ steps.set-release-env.outputs.has_released }}
+      previous_version: ${{ steps.version-var.outputs.previous_version }}
+      current_version: ${{ steps.version-var.outputs.current_version }}
     steps:
       - name: Harden the runner (Audit all outbound calls)
         uses: step-security/harden-runner@6c439dc8bdf85cadbbce9ed30d1c7b959517bc49 # v2.12.2
@@ -83,6 +87,8 @@ jobs:
           path: dist/
 
       # Need to output this to tell the next job that a release was made.
-      - id: set-release-env
-        name: Set release variable
-        run: echo "has_released=true" >> "$GITHUB_OUTPUT"
+      - id: version-var
+        name: Output version variable
+        run: |
+          echo "previous_version=$PREVIOUS_REVISION" >> "$GITHUB_OUTPUT"
+          echo "current_version=$REVISION" >> "$GITHUB_OUTPUT"
