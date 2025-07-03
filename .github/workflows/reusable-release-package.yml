@@ -86,4 +86,3 @@ jobs:
       - id: set-release-env
         name: Set release variable
         run: echo "has_released=true" >> "$GITHUB_OUTPUT"
-
