@@ -10,7 +10,7 @@ on:
         default: 'netlify'
     secrets:
       netlify-token:
-        required: true
+        required: false
       github-token:
         # Needs permissions: contents: write, pages: write
         required: false
