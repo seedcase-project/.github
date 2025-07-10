@@ -2,9 +2,18 @@ name: Build website
 
 on:
   workflow_call:
+    inputs:
+      hosting-provider:
+        description: "Hosting provider to use for publishing the website: netlify or gh-pages. If 'gh-pages', also need to set permissions."
+        required: false
+        type: string
+        default: 'netlify'
     secrets:
       netlify-token:
         required: true
+      github-token:
+        # Needs permissions: contents: write, pages: write
+        required: false
 
 jobs:
   build-deploy:
@@ -27,7 +36,17 @@ jobs:
       # add software dependencies here
 
       - name: Publish to Netlify (and render)
+        if: ${{ inputs.hosting-provider == 'netlify' }}
         uses: quarto-dev/quarto-actions/publish@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
         with:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.netlify-token }}
+
+      # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see above).
+      - name: Publish to GitHub Pages (and render)
+        if: ${{ inputs.hosting-provider == 'gh-pages' }}
+        uses: quarto-dev/quarto-actions/publish@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.github-token }}
