@@ -1,5 +1,11 @@
 name: Test template creation
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      use-quarto:
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   test-copier:
@@ -14,6 +20,7 @@ jobs:
           enable-cache: true
 
       - name: Set up Quarto
+        if: ${{ inputs.use-quarto == true }}
         uses: quarto-dev/quarto-actions/setup@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
 
       - name: Install justfile
