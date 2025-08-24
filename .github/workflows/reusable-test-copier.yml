@@ -1,0 +1,35 @@
+name: Test template creation
+on:
+  workflow_call:
+    inputs:
+      use-quarto:
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  test-copier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@e92bafb6253dcd438e0484186d7669ea7a8ca1cc
+        with:
+          enable-cache: true
+
+      - name: Set up Quarto
+        if: ${{ inputs.use-quarto == true }}
+        uses: quarto-dev/quarto-actions/setup@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
+
+      - name: Install justfile
+        run: sudo apt install -y just
+
+      - name: Set Git user
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "fake@example.com"
+
+      - name: Test and check template creation
+        run: just _tests
