@@ -20,4 +20,4 @@ Our primary goal is to build open software solutions that help:
     processing, storage, and management processes.
 
 Check our [website](https://seedcase-project.org/) for more details, such as
-our roadmap, products, team, and other websites, as well as our collaborators.
+our roadmap, products, team, links to our other websites, and our collaborators.
