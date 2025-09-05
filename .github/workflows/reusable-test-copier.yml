@@ -2,8 +2,8 @@ name: Test template
 on:
   workflow_call:
     inputs:
-      # The recipe that runs the template tests.
-      test-recipe:
+      # The script that runs the template tests.
+      test-script:
         type: string
         required: true
 
@@ -24,15 +24,12 @@ jobs:
         with:
           enable-cache: true
 
-      - name: Install justfile
-        run: sudo apt install -y just
-
       - name: Set Git user
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "fake@example.com"
 
       - name: Test and check template creation
-        run: just ${TEST_RECIPE}
+        run: sh ${TEST_SCRIPT}
         env:
-          TEST_RECIPE: ${{ inputs.test-recipe }}
+          TEST_SCRIPT: ${{ inputs.test-script }}
