@@ -25,6 +25,9 @@ jobs:
     name: "Update project's version and changelog, then make GitHub release"
     if: "!startsWith(github.event.head_commit.message, 'build(version): ')"
     runs-on: ubuntu-latest
+    concurrency:
+      group: release-project-group
+      cancel-in-progress: true
     outputs:
       previous_version: ${{ steps.version-var.outputs.previous_version }}
       current_version: ${{ steps.version-var.outputs.current_version }}
