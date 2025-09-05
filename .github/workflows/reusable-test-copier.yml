@@ -1,6 +1,11 @@
 name: Test template
 on:
   workflow_call:
+    inputs:
+      # The recipe that runs the template tests.
+      test-recipe:
+        type: string
+        required: true
 
 jobs:
   test-copier:
@@ -28,4 +33,6 @@ jobs:
           git config --global user.email "fake@example.com"
 
       - name: Test and check template creation
-        run: just _tests
+        run: just ${TEST_RECIPE}
+        env:
+          TEST_RECIPE: ${{ inputs.test-recipe }}
