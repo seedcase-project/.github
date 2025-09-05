@@ -11,6 +11,9 @@ on:
 jobs:
   build-website:
     runs-on: ubuntu-latest
+    concurrency:
+      group: build-website-python-group
+      cancel-in-progress: true
     env:
         QUARTO_PYTHON: ".venv/bin/python3"
     steps:
