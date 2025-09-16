@@ -2,13 +2,13 @@ name: Test template
 on:
   workflow_call:
     inputs:
-      # The script that runs the template tests.
-      test-script:
+      # The justfile recipe that will run the template tests.
+      test-recipe:
         type: string
         required: true
 
 jobs:
-  test-copier:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Harden the runner (Audit all outbound calls)
@@ -20,9 +20,12 @@ jobs:
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@b75a909f75acd358c2196fb9a5f1299a9a8868a4
+        uses: astral-sh/setup-uv@557e51de59eb14aaaba2ed9621916900a91d50c6
         with:
           enable-cache: true
+
+      - name: Install justfile
+        run: sudo apt install -y just
 
       - name: Set Git user
         run: |
@@ -30,6 +33,6 @@ jobs:
           git config --global user.email "fake@example.com"
 
       - name: Test and check template creation
-        run: sh ${TEST_SCRIPT}
+        run: just ${TEST_RECIPE}
         env:
-          TEST_SCRIPT: ${{ inputs.test-script }}
+          TEST_RECIPE: ${{ inputs.test-recipe }}
