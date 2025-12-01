@@ -54,7 +54,7 @@ jobs:
             source .venv/bin/activate
 
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
+        uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
 
       - name: Spell check repo
         uses: crate-ci/typos@626c4bedb751ce0b7f03262ca97ddda9a076ae1c # v1.39.2
@@ -64,7 +64,7 @@ jobs:
 
       - name: Publish to Netlify (and render)
         if: ${{ inputs.hosting-provider == 'netlify' }}
-        uses: quarto-dev/quarto-actions/publish@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
+        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
         with:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.netlify-token }}
@@ -72,7 +72,7 @@ jobs:
       # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see above).
       - name: Publish to GitHub Pages (and render)
         if: ${{ inputs.hosting-provider == 'gh-pages' }}
-        uses: quarto-dev/quarto-actions/publish@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
+        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
         with:
           target: gh-pages
         env:
