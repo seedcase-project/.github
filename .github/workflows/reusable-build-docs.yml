@@ -3,11 +3,16 @@ name: Build website
 on:
   workflow_call:
     inputs:
+      tinytex:
+        description: "Whether to install TinyTeX for PDF rendering."
+        required: false
+        type: boolean
+        default: false
       hosting-provider:
         description: "Hosting provider to use for publishing the website: netlify or gh-pages. If 'gh-pages', also need to set permissions."
         required: false
         type: string
-        default: 'netlify'
+        default: "netlify"
     secrets:
       netlify-token:
         required: false
@@ -35,8 +40,11 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
-
-      # add software dependencies here
+        # Use basic token to avoid rate limiting when downloading tinytex, which uses GitHub API.
+        env:
+          GH_TOKEN: ${{ secrets.github-token }}
+        with:
+          tinytex: ${{ inputs.tinytex }}
 
       - name: Publish to Netlify (and render)
         if: ${{ inputs.hosting-provider == 'netlify' }}
