@@ -2,11 +2,18 @@ name: Build website
 
 on:
   workflow_call:
+    inputs:
+      hosting-provider:
+        description: "Hosting provider to use for publishing the website: netlify or gh-pages. If 'gh-pages', also need to set permissions."
+        required: false
+        type: string
+        default: 'netlify'
     secrets:
       netlify-token:
-        required: true
+        required: false
       github-token:
-        required: true
+        # Needs permissions: contents: write, pages: write
+        required: false
 
 jobs:
   build-website:
@@ -18,15 +25,15 @@ jobs:
         QUARTO_PYTHON: ".venv/bin/python3"
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a # v2.13.1
+        uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
         with:
           egress-policy: audit
 
       - name: Check out repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       - name: Install uv
-        uses: astral-sh/setup-uv@b75a909f75acd358c2196fb9a5f1299a9a8868a4 # v6.7.0
+        uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867 # v7.1.6
         with:
           # Install a specific version of uv.
           # uv recommends to set the version for best practice.
@@ -37,7 +44,7 @@ jobs:
           cache-dependency-glob: "uv.lock"
 
       - name: "Set up Python"
-        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6.1.0
         with:
           python-version-file: "pyproject.toml"
 
@@ -47,18 +54,26 @@ jobs:
             source .venv/bin/activate
 
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
+        uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
 
       - name: Spell check repo
-        uses: crate-ci/typos@85f62a8a84f939ae994ab3763f01a0296d61a7ee # v1.36.2
+        uses: crate-ci/typos@2d0ce569feab1f8752f1dde43cc2f2aa53236e06 # v1.40.0
 
       - name: Build function reference docs
         run: uv run quartodoc build
 
       - name: Publish to Netlify (and render)
-        uses: quarto-dev/quarto-actions/publish@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
+        if: ${{ inputs.hosting-provider == 'netlify' }}
+        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
         with:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.netlify-token }}
+
+      # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see above).
+      - name: Publish to GitHub Pages (and render)
+        if: ${{ inputs.hosting-provider == 'gh-pages' }}
+        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
+        with:
+          target: gh-pages
         env:
-          GH_TOKEN: ${{ secrets.github-token }}
+          GITHUB_TOKEN: ${{ secrets.github-token }}
