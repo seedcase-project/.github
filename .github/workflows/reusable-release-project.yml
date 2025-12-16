@@ -69,6 +69,9 @@ jobs:
           generate_release_notes: true
           # env variable containing the new version, created by the Commitizen action
           tag_name: ${{ env.REVISION }}
+          # To help with preventing random updates to existing releases.
+          overwrite_files: false
+          append_body: false
 
       # Need to output this to tell the next job that a release was made.
       - id: version-var
