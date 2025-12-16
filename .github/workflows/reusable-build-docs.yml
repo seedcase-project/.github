@@ -46,6 +46,12 @@ jobs:
         with:
           tinytex: ${{ inputs.tinytex }}
 
+      - name: Install Chrome for PDF rendering
+        if: ${{ inputs.tinytex }}
+        run: |
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install ./google-chrome-stable_current_amd64.deb
+
       - name: Publish to Netlify (and render)
         if: ${{ inputs.hosting-provider == 'netlify' }}
         uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
