@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/seedcase-project/seedcase-theme/main/_extensions/seedcase-theme/logos/seedcase-logo.svg" alt="Seedcase Project logo." width="150"/>
+  <img src="https://raw.githubusercontent.com/seedcase-project/seedcase-theme/main/_extensions/seedcase-theme/logos/seedcase/icon.svg" alt="Seedcase Project logo." width="150"/>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/seedcase-project/seedcase-theme/main/_extensions/seedcase-theme/logos/seedcase-font.svg" alt="Seedcase text as an image." width="150"/>
+  <img src="https://raw.githubusercontent.com/seedcase-project/seedcase-theme/main/_extensions/seedcase-theme/logos/seedcase/font.svg" alt="Seedcase text as an image." width="150"/>
 </p>
 
 # A framework for building FAIR research data
