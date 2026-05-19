@@ -51,7 +51,7 @@ jobs:
       - name: Install the project and it's dependencies
         run: |
             uv sync --all-extras --dev
-            source .venv/bin/activate
+            echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b # v2.2.0
