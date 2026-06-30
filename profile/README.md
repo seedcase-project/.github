@@ -13,15 +13,14 @@ Our vision is to make it as easy as possible to create, build, and use FAIR
 data, so that we can reduce the time from data generation to eventual scientific
 dissemination.
 
-Our primary strategies to achieve this vision are to:
+Our strategy to work towards this vision is to:
 
-- Collaborate with research groups and institutions in building up data as
-  packages that are FAIR (Findable, Accessible, Interoperable, and Reusable) and
-  tidy.
-- Create and develop an open ecosystem of tools that automate and streamline the
-  process of building these data packages.
-- Develop and run training workshops to upskill and empower researchers and data
-  producers/owners to build and use FAIR and tidy data packages.
+- Collaborate with research groups to engineer and build up data as FAIR
+  (Findable, Accessible, Interoperable, and Reusable) and tidy data packages
+- Develop open-source tools that automate and streamline how we and others can
+  build these data packages.
+- Upskill and empower researchers and data owners through mentoring, training,
+  and the development of guides and tutorials.
 
 Check our [website](https://seedcase-project.org/) for more details, such as our
 roadmap, products, team, links to our other websites, and our collaborators.
