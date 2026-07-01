@@ -10,12 +10,12 @@
 
 Our vision is to make it as easy as possible to create, build, and use FAIR
 (Findable, Accessible, Interoperable, and Reusable), tidy, and high-quality
-data, so that we can reduce the time from data generation to eventual scientific
+data, so that we can reduce the time from data generation to scientific
 dissemination.
 
 Our strategy to work towards this vision is to:
 
-- Collaborate with research groups to engineer and build up data as FAIR
+- Collaborate with research groups to engineer and build FAIR
   (Findable, Accessible, Interoperable, and Reusable) and tidy data packages
 - Develop open-source tools that automate and streamline how we and others can
   build these data packages.
