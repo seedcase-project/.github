@@ -6,18 +6,21 @@
   <img src="https://raw.githubusercontent.com/seedcase-project/seedcase-theme/main/_extensions/seedcase-theme/logos/seedcase/font.svg" alt="Seedcase text as an image." width="150"/>
 </p>
 
-# A framework for building FAIR research data
+# Growing FAIR and tidy data
 
-Our primary goal is to build open software solutions that help:
+Our vision is to make it as easy as possible to create, build, and use FAIR
+(Findable, Accessible, Interoperable, and Reusable), tidy, and high-quality
+data, ultimately reducing the time from data generation to scientific
+dissemination.
 
--   Research groups and institutions create and manage high-quality and
-    FAIR (Findable, Accessible, Interoperable, and Reusable) research
-    data.
--   Individual researchers to find and (re-)use data more easily for
-    their own research.
--   Reduce the time from data generation to scientific dissemination by
-    focusing on streamlining and automating the data ingestion,
-    processing, storage, and management processes.
+Our strategy to work towards this vision is to:
 
-Check our [website](https://seedcase-project.org/) for more details, such as
-our roadmap, products, team, links to our other websites, and our collaborators.
+- Collaborate with research groups to engineer and build FAIR
+  and tidy data packages
+- Develop open-source tools that automate and streamline building
+  these data packages.
+- Upskill and empower researchers and data owners through mentoring, training,
+  guides, and tutorials.
+
+Check our [website](https://seedcase-project.org/) for more details, such as our
+roadmap, products, team, links to our other websites, and our collaborators.
